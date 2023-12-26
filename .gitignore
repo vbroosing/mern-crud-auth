@@ -1,2 +1,3 @@
 .vscode 
 node_modules 
+src/models/examples_models.py

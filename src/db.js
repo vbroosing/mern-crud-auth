@@ -1,34 +1,47 @@
-const { MongoClient, ServerApiVersion } = require("mongodb");
+//PRUEBA DE CONEXION CON MONGOOSE
+const mongoose = require('mongoose');
 
-// Replace the placeholder with your Atlas connection string
-const uri = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1";
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri,  {
-        serverApi: {
-            version: ServerApiVersion.v1,
-            strict: true,
-            deprecationErrors: true,
-        }
+const conexionDB = async () => {
+    try { 
+        await mongoose.connect('mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1');
+        console.log('---> Base de datos conectada');
+    } catch(e) {
+        console.log('Error: ', e);
     }
-);
-
-async function run() {
-  try {
-    // Connect the client to the server (optional starting in v4.7)
-    await client.connect();
-
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
+};
 
 module.exports = {
-    run
+    conexionDB
 }
 
+// PRUEBA DE CONEXION CON MONGODB
+// const { MongoClient, ServerApiVersion } = require("mongodb");
+
+// const uri = "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.10.1";
+
+// const client = new MongoClient(uri,  {
+//         serverApi: {
+//             version: ServerApiVersion.v1,
+//             strict: true,
+//             deprecationErrors: true,
+//         }
+//     }
+// );
+
+// async function run() {
+//   try {
+//     await client.connect();
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     await client.close();
+//   }
+// }
+
 // run().catch(console.dir);
+
+// module.exports = {
+//     run
+// }
+
+
