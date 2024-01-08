@@ -14,6 +14,7 @@ module.exports = {
     conexionDB
 }
 
+
 // PRUEBA DE CONEXION CON MONGODB
 // const { MongoClient, ServerApiVersion } = require("mongodb");
 

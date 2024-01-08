@@ -17,13 +17,15 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+}, {
+    // Para cortes de tiempo en la colecciósn
+    timestamps: true,
 });
 
 // export default mongoose.model('User', userSchema);
 
-
-const usuarios = mongoose.model('User', userSchema);
+let User = mongoose.model('User', userSchema);
 
 module.exports = {
-    usuarios,
+    User,
 }

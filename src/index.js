@@ -7,10 +7,10 @@ const {conexionDB} = require('./db.js');
 
 conexionDB();
 app.listen(3000);
-console.log('SERVER ON PORT ', 3000);
+// console.log('SERVER ON PORT ', 3000);
 
 
 
-console.log("probando probando");
+// console.log("probando probando");
 
-console.log("segunda prueba");
+// console.log("segunda prueba");
