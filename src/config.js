@@ -1,4 +1,4 @@
-const TOKEN_SECRET = 'some secret kay';
+const TOKEN_SECRET = 'some secret key';
 
 
 module.exports = {

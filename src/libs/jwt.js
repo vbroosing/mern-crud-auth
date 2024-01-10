@@ -27,8 +27,6 @@ function createAccessToken(payload) {
     })
 }
 
-
-
 module.exports = {
     createAccessToken,
 }
