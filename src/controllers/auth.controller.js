@@ -75,10 +75,16 @@ const logout = async (req, res) => {
     })
 
     return res.sendStatus(200);
+
+};
+
+const profile = (req, res) => {
+    res.send('profile')
 }
 
 module.exports = {
     register,
     login,
-    logout
+    logout,
+    profile
 }
