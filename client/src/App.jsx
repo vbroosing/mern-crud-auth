@@ -1,6 +1,6 @@
 // import React from 'react'
-import loginPage from './pages/loginPage.jsx'
-import registerPage from './pages/registerPage.jsx'
+import loginPage from './pages/loginPage'
+import registerPage from './pages/registerPage'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
