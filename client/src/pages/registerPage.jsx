@@ -9,7 +9,7 @@ function registerPage (){
         <div>
             <form 
             className='bg-zinc-600 max-w-md p-10 rounded-ms'
-            onSubmit={handleSubmit( async values => {
+            onSubmit={handleSubmit( async (values) => {
                 console.log(values);
                 const res = await registerRequest(values);
             })}

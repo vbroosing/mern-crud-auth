@@ -1,19 +1,43 @@
-// import textField from "../components/textField"
+// import { useForm } from 'react-hook-form';
+// import { loginRequest } from '../api/auth.js';
+
+// import { login } from "../../../src/controllers/auth.controller.js"
+
+// function loginPage (){
+
+//     const { login, handleSubmit } = useForm();
+
+//     return (
+//         <div>
+//             <form 
+//             className='bg-zinc-600 max-w-md p-10 rounded-ms'
+//             onSubmit={handleSubmit( async (values) => {
+//                 console.log(values);
+//                 const res = await loginRequest(values);
+//             })}
+//             >
+//             {/* http://localhost:5173/register?username=&email=&password= */}
+//                 <input type="email" {...login('email', { required: true })}
+//                     className='w-full bg-white text-zinc-700 px-4 py-2 rounded-md shadow-lg  my-1'
+//                     placeholder="email"
+//                 />
+//                 <input type="password" {...login('password', { required: true,  })}
+//                     className='w-full bg-white text-zinc-700 text- px-4 py-2 rounded-md shadow-lg  my-1'
+//                     placeholder="password"
+//                 />
+
+//                 <button className='w-full bg-zinc-800 border-slate-300 px-2 py-2 rounded-md shadow-lg ' type="submit">Registrarse</button>
+//             </form>
+
+//         </div>
+//     );
+// } 
+
+// export default loginPage
 
 function loginPage (){
     return (
-        <div>
-            <form class="relative p-3 col-start-1 row-start-1 flex flex-col rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1" method="post" action="/profile">
-                <input type="text" name="email" />
-                <input type="password" name="password"/>
-                <input type="submit" name="enviar"/>
-
-            </form>
-        </div>
+        <div>Login Page</div>
     )
 }
-
 export default loginPage
-
-
-     
